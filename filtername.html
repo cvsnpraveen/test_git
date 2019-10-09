@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get every element in the array has a value above a specific number.</p>
+<p>Minimum age: <input type="text" id="ageToCheck" value="praveen"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p>All ages above minimum: <span id="demo"></span></p>
+
+<script>
+var ages = [{name: "praveen"},{name: "nipuna"},{name: "Lakshmi"},{name: "sindhura"}];
+
+function checkAdult(age) {
+  return age.name === document.getElementById("ageToCheck").value;
+}
+
+function myFunction() {
+  console.log(ages.filter(checkAdult));
+  document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+}
+</script>
+
+</body>
+</html>
